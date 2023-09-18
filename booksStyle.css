@@ -1,0 +1,72 @@
+@import url(style.css);
+
+header {
+    position: inherit;
+}
+
+body {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    animation: inherit;
+    font-size: larger;
+}
+
+.books {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-input {
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 5px 8px;
+    height: 20px;
+    width: 350px;
+}
+
+.search-btn {
+    border: 1px solid;
+    border-radius: 25px;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.search-btn:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s; 
+    border-color: black;
+}
+
+.input-image {
+    border: 1px solid;
+    height: 150px;
+    width: 120px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grade-btn {
+    border: 1px solid;
+    height: 30px;
+    width: 30px;
+    
+}
