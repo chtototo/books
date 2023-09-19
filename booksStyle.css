@@ -2,13 +2,20 @@
 
 header {
     position: inherit;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 body {
-    padding: 20px;
+    background-color: rgb(238, 238, 238);
 }
 
 .content {
+    margin-top: 150px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,11 +69,51 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    border: 0px solid;
+    margin: 7px;
 }
 
-.grade-btn {
-    border: 1px solid;
-    height: 30px;
-    width: 30px;
-    
+.rating-area {
+	overflow: hidden;
+	width: 220px; /* 265px */
+	margin: 0;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 44px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 50px;
+	line-height: 32px;
+	color: lightgrey;
+	/* text-shadow: 1px 1px #bbb; */
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	/* text-shadow: 1px 1px #c60; */
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	/* text-shadow: 1px 1px goldenrod; */
+}
+.rate-area > label:active {
+	position: relative;
 }
